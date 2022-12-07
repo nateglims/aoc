@@ -1,3 +1,4 @@
 *.input
 \#*
 *\~undo-tree\~
+*.fasl
