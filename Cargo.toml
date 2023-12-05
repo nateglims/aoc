@@ -1,0 +1,8 @@
+[workspace]
+
+members = [
+    "aoc-runner",
+    "day-one",
+]
+
+resolver = "2"
