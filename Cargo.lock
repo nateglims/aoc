@@ -16,6 +16,7 @@ name = "aoc-runner"
 version = "0.1.0"
 dependencies = [
  "day-one",
+ "day-two",
 ]
 
 [[package]]
@@ -24,6 +25,10 @@ version = "0.1.0"
 dependencies = [
  "regex",
 ]
+
+[[package]]
+name = "day-two"
+version = "0.1.0"
 
 [[package]]
 name = "memchr"

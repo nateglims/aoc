@@ -3,6 +3,7 @@
 members = [
     "aoc-runner",
     "day-one",
+    "day-two",
 ]
 
 resolver = "2"
