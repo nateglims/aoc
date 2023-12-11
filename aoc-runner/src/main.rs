@@ -3,8 +3,10 @@ use std::io::{self, BufRead};
 use std::path::Path;
 
 fn main() {
-    println!("Day 1, Part 1: {}", day_one::part1(load_input()));
-    println!("Day 1, Part 2: {}", day_one::part2(load_input()));
+    // Going for something different with day 3...
+    let input = include_str!("../../day3.input");
+
+    println!("Day 3, Part 1: {}", day_three::part1(input));
 }
 
 pub fn load_input() -> Vec<String> {
