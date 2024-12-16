@@ -62,7 +62,6 @@ pub const Input = struct {
 test "Try reading a file." {
     const ir = try Input.from_file("testdata/input.txt", std.testing.allocator);
     defer ir.deinit(std.testing.allocator);
-    std.debug.print("Buffer: {s}\n", .{ir.buf});
     try std.testing.expectEqualStrings("line1", ir.buf[0]);
 }
 
@@ -70,7 +69,6 @@ test "Try reading a sample input." {
     const input = [_][]const u8{ "3  4", "43  3" };
     const ir = try Input.from_sample(&input, std.testing.allocator);
     defer ir.deinit(std.testing.allocator);
-    std.debug.print("Buffer: {s}\n", .{ir.buf});
     try std.testing.expectEqualStrings("3  4", ir.buf[0]);
 }
 
@@ -81,7 +79,6 @@ test "Try reading a multiline string input." {
     ;
     const ir = try Input.from_string(input, std.testing.allocator);
     defer ir.deinit(std.testing.allocator);
-    std.debug.print("Buffer: {s}\n", .{ir.buf});
     try std.testing.expectEqualStrings("line2", ir.buf[0]);
     try std.testing.expectEqualStrings("line3", ir.buf[1]);
 }
