@@ -1,6 +1,8 @@
 const std = @import("std");
 const fs = std.fs;
 
+pub const StrIterator = std.mem.SplitIterator(u8, std.mem.DelimiterType.sequence);
+
 pub const Input = struct {
     buf: [][]const u8,
 
