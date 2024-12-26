@@ -74,6 +74,9 @@ const CompFn = fn (val: i32) bool;
 fn is_safe(v: []i32, comptime compFn: CompFn, tol: usize) bool {
     if (tol > 0) {
         for (0..v.len) |i| {
+            // Brute force, but I am trying not to reallocate the buffer in any
+            // loops though this iterator struct is probably larger than the
+            // longest buffer. At least it's not on the heap ¯\_(ツ)_/¯
             var iter = skipIter(i32, v, i);
 
             while (iter.next()) |n| {
