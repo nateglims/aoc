@@ -63,7 +63,12 @@ pub fn build(b: *std.Build) void {
 
     // Creates a step for unit testing. This only builds the test executable
     // but does not run it.
-    for ([_][]const u8{ "src/lib/input.zig", "src/lib/iterator.zig" }) |lib| {
+    for ([_][]const u8{
+        "src/lib/input.zig",
+        "src/lib/iterator.zig",
+        "src/lib/day-three/lexer.zig",
+        "src/lib/day-three/token.zig",
+    }) |lib| {
         const lib_unit_tests = b.addTest(.{
             .root_source_file = b.path(lib),
             .target = target,
